@@ -1,2 +1,2 @@
 Implementation of DesignTimeResourceProviderFactory. This functional sample is base on this project: https://www.codeproject.com/Articles/14190/ASP-NET-Custom-SQL-Server-ResourceProvider. 
-In the linked project ther is a sample of readin resource from db server. This project is a completation of the project with the implementation of a DesignTimeResourceProviderFactory, such that with Visual Studio you can use the "generate localresource" from tools menù.
+In the linked project there is a sample of reading resource from DB server. This project is a full project with the implementation of a DesignTimeResourceProviderFactory, such that with Visual Studio you can use the "generate local resource" from tools menu to write resource into DB.

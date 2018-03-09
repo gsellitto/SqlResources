@@ -77,7 +77,7 @@ namespace SqlResourcesNameSpace
                 string resource_object = string.IsNullOrEmpty(virtualPath) ? className : virtualPath;
                 if (string.IsNullOrEmpty(resource_object))
                 {
-                    throw new Exception("SqlResourceHelper.GetResources() - Nessun virtualPath o className.");
+                    throw new Exception("SqlResourceHelper.GetResources() - virtualPath or className missing from parameters.");
                 }
                 if (!string.IsNullOrEmpty(cultureName))
                 {

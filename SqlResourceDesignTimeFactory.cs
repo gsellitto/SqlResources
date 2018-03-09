@@ -12,13 +12,8 @@ using System.Configuration;
 namespace SqlResourcesNameSpace
 {
     /// <summary>
-    /// Factory per creare la classe SqlResourceDesignTimeProvider
-    /// Per default il designer salva con la colture it-IT, questo parametro può essere modificato mettendo in AppSettings il valore LocalizationDefaultDesignCulture
-    /// allacolture desiderata.
-    /// La connection string da utilizzare per l'accesso al db può essere impostata con il valore LocalizationDatabasePath in Appsettings, oppure inserendo nelle connectionstring 
-    /// la connessione con nome connectionstring_sql.
+    /// Factory to create SqlResourceDesignTimeProvider.    
     /// </summary>
-
     public sealed class SqlResourceDesignTimeFactory : DesignTimeResourceProviderFactory
     {
 
@@ -41,6 +36,11 @@ namespace SqlResourcesNameSpace
             return null;
         }
 
+        /// <summary>
+        /// Generate del local resource provider.
+        /// </summary>
+        /// <param name="serviceProvider"></param>
+        /// <returns></returns>
         public override IResourceProvider CreateDesignTimeLocalResourceProvider(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
@@ -57,8 +57,10 @@ namespace SqlResourcesNameSpace
 
 
     /// <summary>
-    /// Provider SQLResourceProvider
-    /// 
+    /// Provider SqlResourceDesignTimeProvider 
+    /// This provider need two setting in AppSettings:
+    ///     LocalizationDefaultDesignCulture the default colture for saving record in db.
+    ///     LocalizationDatabasePath         the connection string to use for connection to db. The db needs to contain th e table ASPNET_GLOBALIZATION_RESOURCES
     /// </summary>
     public sealed class SqlResourceDesignTimeProvider
         :IResourceProvider ,IDesignTimeResourceWriter  
@@ -116,7 +118,6 @@ namespace SqlResourcesNameSpace
             {
                 if (this._resourceCacheInternal == null)
                 {
-                    //this._resourceCacheInternal = new ListDictionary();
                     this._resourceCacheInternal = SqlResourceHelper.GetResources(GetVirtualPath(_provider), null, DefaultDesignCulture(),  _provider);
                 }
                 return _resourceCacheInternal;
