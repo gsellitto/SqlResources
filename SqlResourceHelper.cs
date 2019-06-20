@@ -12,7 +12,7 @@ namespace SqlResourcesNameSpace
 {
     internal static class SqlResourceHelper
     {
-        //test di commento 2
+        //test di commento 29999
         private const string DatabaseLocationKey = "LocalizationDatabasePath";
 
         /// <summary>
@@ -40,6 +40,7 @@ namespace SqlResourcesNameSpace
             }
         }
 
+        //nuovo commento
         public static void AddResource(string virtualPath, string className, string resource_name, string value, string cultureName, IServiceProvider serviceProvider)
         {
             using (SqlConnection sqlConnection = new SqlConnection(GetConnectionString(serviceProvider)))
