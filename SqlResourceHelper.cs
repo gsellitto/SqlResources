@@ -62,8 +62,8 @@ namespace SqlResourcesNameSpace
         }
 
         /// riga da non portare
-        /// llll jjj
-        /// lldkdkdk jjj
+        /// seconda riga
+        /// terza riga
         /// <summary>
         /// Legge i valori dal db. VirtualPath è valorizzato nel caso di risorse locali, classnme è valorizzato nel caso di risorse globali.
         /// sono mutualmente esclusivi e vanno nella stessa colonna resource_object del db. Hanno peró due siginificati diversi.
