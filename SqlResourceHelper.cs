@@ -12,7 +12,7 @@ namespace SqlResourcesNameSpace
 {
     internal static class SqlResourceHelper
     {
-        //test di commento 29999
+        //test di commento 29999 jests
         private const string DatabaseLocationKey = "LocalizationDatabasePath";
 
         /// <summary>
@@ -60,14 +60,14 @@ namespace SqlResourcesNameSpace
         }
 
         /// <summary>
-        /// Legge i valori dal db. VirtualPath è valorizzato nel caso di risorse locali, classnme è valorizzato nel caso di risorse globali.
-        /// sono mutualmente esclusivi e vanno nella stessa colonna resource_object del db. Hanno però due siginificati diversi.
+        /// Legge i valori dal db. VirtualPath ï¿½ valorizzato nel caso di risorse locali, classnme ï¿½ valorizzato nel caso di risorse globali.
+        /// sono mutualmente esclusivi e vanno nella stessa colonna resource_object del db. Hanno perï¿½ due siginificati diversi.
         /// </summary>
         /// <param name="virtualPath"></param>
         /// <param name="className"></param>
         /// <param name="cultureName"></param>
         /// <param name="designMode"></param>
-        /// <param name="serviceProvider">Serviceprovider serve per recuperare la connectionstring, per capire se si è in design mode o application mode.</param>
+        /// <param name="serviceProvider">Serviceprovider serve per recuperare la connectionstring, per capire se si ï¿½ in design mode o application mode.</param>
         /// <returns></returns>
         public static IDictionary GetResources(string virtualPath, string className, string cultureName, IServiceProvider serviceProvider)
         {
