@@ -12,7 +12,7 @@ namespace SqlResourcesNameSpace
 {
     internal static class SqlResourceHelper
     {
-        //test di commento
+        //test di commento 2
         private const string DatabaseLocationKey = "LocalizationDatabasePath";
 
         /// <summary>
