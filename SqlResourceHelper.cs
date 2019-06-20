@@ -61,6 +61,7 @@ namespace SqlResourcesNameSpace
             }
         }
 
+        /// riga per il merge
         /// riga da non portare
         /// seconda riga
         /// terza riga
